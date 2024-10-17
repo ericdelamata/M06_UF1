@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <dialog id="win">
+        <p id="youWin">You win</p>
+        <button id="playAgain">Play Again</button>
+        <button id="close" onclick="hideDialogWin()">Close</button>
+    </dialog>
+    <dialog id="lose">
+        <p id="youLose">You Lose</p>
+        <button id="playAgain">Play Again</button>
+        <button id="close" onclick="hideDialogLose()">Close</button>
+    </dialog>
+    <div id="ahorcado">
+        <img id="image" src="img/whitehangman.png">
+    </div>
+    <header id="cap">
+        <div id="information">
+            <h1 id="titol">Anem a jugar</h1>
+            <h4 id="description">Un dels jugadors haurà d'escriure la paraula, l'altre haura d'intentar adivinar-la. Pero ves amb compte, no deixis que l'home caigui al foc!!</h4>
+        </div>
+        <div id="playZone">
+            <div id="containerVides">
+                <h3 id="vides">Vides:</h3>
+            </div>
+            <div id="multi">
+                <input type="password" id="secretWord">
+                <button id="seeWord" onclick="seeWord()">👁</button>
+                <button id="enviarParaula" onclick="getWord()">Enviar</button>
+            </div>
+        </div>
+    </header>
+    <div>
+        <div id="game">
+            <div id="letras">
+                <button class="buttonL" id="buton_1" onclick="playLetter(this)">A</button>
+                <button class="buttonL" id="buton_2" onclick="playLetter(this)">B</button>
+                <button class="buttonL" id="buton_3" onclick="playLetter(this)">C</button>
+                <button class="buttonL" id="buton_4" onclick="playLetter(this)">D</button>
+                <button class="buttonL" id="buton_5" onclick="playLetter(this)">E</button>
+                <button class="buttonL" id="buton_6" onclick="playLetter(this)">F</button>
+                <button class="buttonL" id="buton_7" onclick="playLetter(this)">G</button>
+                <button class="buttonL" id="buton_8" onclick="playLetter(this)">H</button>
+                <button class="buttonL" id="buton_9" onclick="playLetter(this)">I</button>
+                <button class="buttonL" id="buton_10" onclick="playLetter(this)">J</button>
+                <button class="buttonL" id="buton_11" onclick="playLetter(this)">K</button>
+                <button class="buttonL" id="buton_12" onclick="playLetter(this)">L</button>
+                <button class="buttonL" id="buton_13" onclick="playLetter(this)">M</button>
+                <button class="buttonL" id="buton_14" onclick="playLetter(this)">N</button>
+                <button class="buttonL" id="buton_15" onclick="playLetter(this)">O</button>
+                <button class="buttonL" id="buton_16" onclick="playLetter(this)">P</button>
+                <button class="buttonL" id="buton_17" onclick="playLetter(this)">Q</button>
+                <button class="buttonL" id="buton_18" onclick="playLetter(this)">R</button>
+                <button class="buttonL" id="buton_19" onclick="playLetter(this)">S</button>
+                <button class="buttonL" id="buton_20" onclick="playLetter(this)">T</button>
+                <button class="buttonL" id="buton_21" onclick="playLetter(this)">U</button>
+                <button class="buttonL" id="buton_22" onclick="playLetter(this)">V</button>
+                <button class="buttonL" id="buton_23" onclick="playLetter(this)">W</button>
+                <button class="buttonL" id="buton_24" onclick="playLetter(this)">X</button>
+                <button class="buttonL" id="buton_25" onclick="playLetter(this)">Y</button>
+                <button class="buttonL" id="buton_26" onclick="playLetter(this)">Z</button>
+            </div>
+            <div id="containerWordToGuess">
+                <h1 id="wordToGuess"></h1>
+            </div>
+        </div>
+    </div>
+    <pre id="fire"></pre>
+    <script src="script/mainmenu.js"></script>
+    <script src="script/fire.js"></script>
+    <script src="script/joc.js"></script>
+</body>
+
+</html>

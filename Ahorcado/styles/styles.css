@@ -1,0 +1,243 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    font-family: Stylish;
+}
+
+#playAgain {
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: white;
+    border-radius: 5px;
+}
+
+#close {
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: white;
+    border-radius: 5px;
+}
+
+#youWin {
+    margin-top: 0;
+    margin-bottom: 0%;
+}
+
+#win {
+    font-size: 4rem;
+    text-align: center;
+    width: 25%;
+    height: 25%;
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: white;
+    border-radius: 5px;
+}
+
+#youLose {
+    margin-top: 0;
+    margin-bottom: 0%;
+}
+
+#lose {
+    font-size: 4rem;
+    text-align: center;
+    width: 25%;
+    height: 25%;
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: white;
+    border-radius: 5px;
+}
+
+#playZone {
+    z-index: 9;
+}
+
+#information {
+    width: 25%;
+}
+
+#cap {
+    display: flex;
+    justify-content: space-around;
+}
+
+#seeWord,
+#enviarParaula {
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: white;
+    border-radius: 5px;
+}
+
+#game {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.buttonL {
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: white;
+    border-radius: 5px;
+}
+
+#letras {
+    z-index: 9;
+    width: 20%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px 3px;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: white;
+}
+
+#ahorcado {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 7;
+}
+
+#image {
+    position: absolute;
+    filter: brightness(100);
+    margin-top: -30%;
+    animation: none;
+}
+
+#containerWordToGuess {
+    width: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: white;
+}
+
+#fire {
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes cae0 {
+    100% {
+        margin-top: -28%;
+    }
+}
+
+@keyframes cae1 {
+    0% {
+        margin-top: -28%;
+    }
+    100% {
+        margin-top: -25%;
+    }
+}
+
+@keyframes cae2 {
+    0% {
+        margin-top: -25%;
+    }
+    100% {
+        margin-top: -22%;
+    }
+}
+
+@keyframes cae3 {
+    0% {
+        margin-top: -22%;
+    }
+    100% {
+        margin-top: -19%;
+    }
+}
+
+@keyframes cae4 {
+    0% {
+        margin-top: -19%;
+    }
+    100% {
+        margin-top: -16%;
+    }
+}
+
+@keyframes cae5 {
+    0% {
+        margin-top: -16%;
+    }
+    100% {
+        margin-top: -13%;
+    }
+}
+
+@keyframes cae6 {
+    0% {
+        margin-top: -13%;
+    }
+    100% {
+        margin-top: -10%;
+    }
+}
+
+@keyframes cae7 {
+    0% {
+        margin-top: -10%;
+    }
+    100% {
+        margin-top: -7%;
+    }
+}
+
+@keyframes cae8 {
+    0% {
+        margin-top: -7%;
+    }
+    100% {
+        margin-top: -4%;
+    }
+}
+
+@keyframes cae9 {
+    0% {
+        margin-top: -4%;
+    }
+    100% {
+        margin-top: -1%;
+    }
+}
