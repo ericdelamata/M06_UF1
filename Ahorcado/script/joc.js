@@ -7,8 +7,27 @@ let contador = 0;
 
 let encertades = [];
 
+let solo = false;
+document.getElementById("menu").showModal();
+
+
+function playSolo() {
+    solo = true;
+    paraula = (palabras_comunes[Math.floor(Math.random() * palabras_comunes.length)]).toUpperCase().trim()
+        .replace(/[\s_-]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+    document.getElementById("multi").style.display = "none";
+    document.getElementById("cap").style.marginLeft = "30%";
+    document.getElementById("menu").close();
+    getWord();
+}
+
 function getWord() {
-    paraula = (inputObj.value).toUpperCase();
+    if (!solo) {
+        paraula = (inputObj.value).toUpperCase();
+    }
     if (isNaN(paraula)) {
         if (paraula.length < 4 || paraula.length > 16) {
             alert("La paraula ha de ser minim de 4 lletres i maxim de 16");
@@ -19,7 +38,9 @@ function getWord() {
                 lletres = paraula.split("");
                 console.log(lletres);
                 createEncertades();
-                inputObj.value = "";
+                if (!solo) {
+                    inputObj.value = "";
+                }
             }
             displayLives();
         }
@@ -72,6 +93,7 @@ function playLetter(obj) {
         obj.style.borderColor = "green";
         displayWord();
         if (!encertades.includes("_")) {
+            disableAllLetters();
             document.getElementById("win").showModal();
         }
     } else {
@@ -80,6 +102,8 @@ function playLetter(obj) {
         obj.style.color = "red";
         obj.style.borderColor = "red";
         if (contador === 9) {
+            disableAllLetters();
+            document.getElementById("palabraSecreta").innerHTML = "La paraula secreta era: " + paraula;
             document.getElementById("lose").showModal();
         }
         contador++;
@@ -90,6 +114,15 @@ function playLetter(obj) {
 
 function disableLetter(obj) {
     obj.disabled = true;
+}
+
+function disableAllLetters() {
+    let x = "buton_";
+    let y;
+    for (var i = 1; i < 27; i++) {
+        y = x + i;
+        document.getElementById(y).disabled = true;
+    }
 }
 
 function hideDialogLose() {

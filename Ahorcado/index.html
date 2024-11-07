@@ -12,13 +12,25 @@
 </head>
 
 <body>
+    <dialog id="menu">
+        <div id="information">
+            <h1 id="titol">Anem a jugar</h1>
+            <h4 id="description">Un dels jugadors haurà d'escriure la paraula, l'altre haura d'intentar adivinar-la. Pero ves amb compte, no deixis que l'home caigui al foc!!</h4>
+            <div>
+                <button onclick="playSolo()">Solo</button>
+                <button>Cooperativo</button>
+                <button>Compe</button>
+            </div>
+        </div>
+    </dialog>
     <dialog id="win">
         <p id="youWin">You win</p>
         <button id="playAgain">Play Again</button>
         <button id="close" onclick="hideDialogWin()">Close</button>
     </dialog>
     <dialog id="lose">
-        <p id="youLose">You Lose</p>
+        <h1 id="youLose">You Lose</h1>
+        <p id="palabraSecreta"></p>
         <button id="playAgain">Play Again</button>
         <button id="close" onclick="hideDialogLose()">Close</button>
     </dialog>
@@ -26,10 +38,6 @@
         <img id="image" src="img/whitehangman.png">
     </div>
     <header id="cap">
-        <div id="information">
-            <h1 id="titol">Anem a jugar</h1>
-            <h4 id="description">Un dels jugadors haurà d'escriure la paraula, l'altre haura d'intentar adivinar-la. Pero ves amb compte, no deixis que l'home caigui al foc!!</h4>
-        </div>
         <div id="playZone">
             <div id="containerVides">
                 <h3 id="vides">Vides:</h3>
@@ -75,9 +83,17 @@
                 <h1 id="wordToGuess"></h1>
             </div>
         </div>
+        <div id="puntuacions">
+            <div id="puntuacion1">
+
+            </div>
+            <div id="puntuacion2">
+
+            </div>
+        </div>
     </div>
     <pre id="fire"></pre>
-    <script src="script/mainmenu.js"></script>
+    <script src="script/palabras.js"></script>
     <script src="script/fire.js"></script>
     <script src="script/joc.js"></script>
 </body>
