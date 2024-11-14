@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc de les Parelles</title>
+    <link rel="stylesheet" href="styles/style_joc.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <button class="instructions-btn" onclick="openInstructions()">Mostra les instruccions</button>
+
+        <h2>La puntuació més alta</h2>
+        <p id="high-score"></p>
+
+        <h3 id="player">jugador 1</h3>
+        <p class="current-score">Punts: 0</p>
+
+        <div id="game-board">
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>A</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>A</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>B</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>B</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>D</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>D</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>E</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>E</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>F</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>F</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>A</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>A</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>B</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>B</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>D</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleFlip(this)">
+                <div class="card-inner">
+                    <div class="front"></div>
+                    <div class="back">
+                        <p>D</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/joc.js"></script>
+</body>
+
+</html>
