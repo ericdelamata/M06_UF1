@@ -31,7 +31,9 @@ function openInstructions() {
 
 
 function setScore() {
-    document.getElementById("high-score").textContent = "JUGADOR: " + user + " - PUNTS: " + points + " punts"
+    document.getElementById("high-score").textContent = "JUGADOR: " + user + " - PUNTS: " + points + " punts";
+    bc.postMessage({ action: "updateScore", user: user, points: points });
+    document.getElementById("current-score").textContent = "Punts: " + points;
 }
 
 function playCard(element) {
@@ -45,16 +47,12 @@ function playCard(element) {
             setTimeout(clearWrong, 600);
             points -= 3;
 
-            //Això funciona al Chrome i no al mozzilla
-            bc.postMessage({ action: "updateScore", user: user, points: points });
             setScore();
         } else {
             cont++;
             guess = [];
             points += 10;
 
-            //Això funciona al Chrome i no al mozzilla
-            bc.postMessage({ action: "updateScore", user: user, points: points });
             setScore();
         }
     }
