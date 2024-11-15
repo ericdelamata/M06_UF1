@@ -25,7 +25,6 @@ function getName() {
     } else if (!partidaComencada) {
         document.getElementById("startGame").disabled = true;
         document.cookie = "nombre=" + name + "; path=/; expires=Thu, 31 Dec 2024 23:59:59 GMT; secure; samesite=strict";
-        document.getElementById("game").textContent = "Jugador: " + name + ", Punts: 0, ESTAT PARTIDA: En joc"
         game = window.open("joc.html");
     }
 }
